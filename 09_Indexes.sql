@@ -184,3 +184,8 @@ WHERE game_id=2;
 -- 35. Sort Leaderboard
 SELECT * FROM Leaderboards
 ORDER BY score DESC;
+
+-- List All Indexes in the Database
+SELECT TABLE_NAME, INDEX_NAME, COLUMN_NAME
+FROM INFORMATION_SCHEMA.STATISTICS
+WHERE TABLE_SCHEMA='GamingPlatformDB';
