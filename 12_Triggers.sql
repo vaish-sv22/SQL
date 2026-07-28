@@ -207,3 +207,41 @@ ORDER BY action_time DESC;
 -- Count Logs --
 SELECT COUNT(*)
 FROM AuditLog;
+
+-- TRIGGER EXECUTION ORDER -- 
+
+-- INSERT OPERATION --
+INSERT
+   │
+   ▼
+BEFORE INSERT
+   │
+   ▼
+Row Inserted
+   │
+   ▼
+AFTER INSERT
+
+-- UPDATE OPERATION -- 
+UPDATE
+   │
+   ▼
+BEFORE UPDATE
+   │
+   ▼
+Row Updated
+   │
+   ▼
+AFTER UPDATE
+
+-- DELETE OPERATION -- 
+DELETE
+   │
+   ▼
+BEFORE DELETE
+   │
+   ▼
+Row Deleted
+   │
+   ▼
+AFTER DELETE
