@@ -1,0 +1,433 @@
+1. CREATE DATABASE
+------------------
+
+Syntax:
+CREATE DATABASE database_name;
+
+Example:
+CREATE DATABASE GamingPlatformDB;
+
+-----------------------------------------
+
+2. USE DATABASE
+---------------
+
+Syntax:
+USE database_name;
+
+Example:
+USE GamingPlatformDB;
+
+-----------------------------------------
+
+3. CREATE TABLE
+---------------
+
+Syntax:
+CREATE TABLE table_name
+(
+    column_name datatype constraints,
+    column_name datatype constraints
+);
+
+Example:
+CREATE TABLE Users
+(
+    user_id INT PRIMARY KEY,
+    username VARCHAR(50),
+    email VARCHAR(100)
+);
+
+-----------------------------------------
+
+4. INSERT
+---------
+
+Syntax:
+INSERT INTO table_name
+(column1,column2,...)
+
+VALUES
+(value1,value2,...);
+
+-----------------------------------------
+
+5. SELECT
+---------
+
+Syntax:
+SELECT column_name
+FROM table_name;
+
+-----------------------------------------
+
+6. SELECT ALL
+-------------
+
+Syntax:
+SELECT *
+FROM table_name;
+
+-----------------------------------------
+
+7. DISTINCT
+-----------
+
+Syntax:
+SELECT DISTINCT column_name
+FROM table_name;
+
+-----------------------------------------
+
+8. WHERE
+---------
+
+Syntax:
+SELECT *
+FROM table_name
+WHERE condition;
+
+-----------------------------------------
+
+9. ORDER BY
+-----------
+
+Syntax:
+SELECT *
+FROM table_name
+ORDER BY column_name ASC;
+
+-----------------------------------------
+
+10. GROUP BY
+------------
+
+Syntax:
+SELECT column_name,
+COUNT(*)
+
+FROM table_name
+
+GROUP BY column_name;
+
+-----------------------------------------
+
+11. HAVING
+----------
+
+Syntax:
+SELECT column_name,
+COUNT(*)
+
+FROM table_name
+
+GROUP BY column_name
+
+HAVING COUNT(*)>5;
+
+-----------------------------------------
+
+12. UPDATE
+----------
+
+Syntax:
+UPDATE table_name
+
+SET column=value
+
+WHERE condition;
+
+-----------------------------------------
+
+13. DELETE
+----------
+
+Syntax:
+DELETE FROM table_name
+
+WHERE condition;
+
+-----------------------------------------
+
+14. ALTER TABLE
+---------------
+
+Add Column
+
+ALTER TABLE table_name
+ADD column_name datatype;
+
+Drop Column
+
+ALTER TABLE table_name
+DROP COLUMN column_name;
+
+Modify Column
+
+ALTER TABLE table_name
+MODIFY column_name datatype;
+
+-----------------------------------------
+
+15. DROP TABLE
+--------------
+
+Syntax:
+DROP TABLE table_name;
+
+-----------------------------------------
+
+16. TRUNCATE TABLE
+------------------
+
+Syntax:
+TRUNCATE TABLE table_name;
+
+-----------------------------------------
+
+17. INNER JOIN
+--------------
+
+Syntax:
+SELECT *
+
+FROM table1
+
+INNER JOIN table2
+
+ON table1.id=table2.id;
+
+-----------------------------------------
+
+18. LEFT JOIN
+-------------
+
+Syntax:
+SELECT *
+
+FROM table1
+
+LEFT JOIN table2
+
+ON table1.id=table2.id;
+
+-----------------------------------------
+
+19. RIGHT JOIN
+--------------
+
+Syntax:
+SELECT *
+
+FROM table1
+
+RIGHT JOIN table2
+
+ON table1.id=table2.id;
+
+-----------------------------------------
+
+20. CROSS JOIN
+--------------
+
+Syntax:
+SELECT *
+
+FROM table1
+
+CROSS JOIN table2;
+
+-----------------------------------------
+
+21. SUBQUERY
+------------
+
+Syntax:
+SELECT *
+
+FROM table_name
+
+WHERE column IN
+
+(
+SELECT column
+FROM table_name
+);
+
+-----------------------------------------
+
+22. VIEW
+---------
+
+Create View
+
+CREATE VIEW view_name AS
+
+SELECT *
+FROM table_name;
+
+Display
+
+SELECT *
+FROM view_name;
+
+Drop
+
+DROP VIEW view_name;
+
+-----------------------------------------
+
+23. INDEX
+----------
+
+Create
+
+CREATE INDEX index_name
+
+ON table_name(column_name);
+
+Show
+
+SHOW INDEX
+FROM table_name;
+
+Drop
+
+DROP INDEX index_name
+ON table_name;
+
+-----------------------------------------
+
+24. STORED PROCEDURE
+--------------------
+
+CREATE PROCEDURE procedure_name()
+
+BEGIN
+
+SQL Statements;
+
+END;
+
+Call
+
+CALL procedure_name();
+
+-----------------------------------------
+
+25. FUNCTION
+------------
+
+CREATE FUNCTION function_name()
+
+RETURNS datatype
+
+BEGIN
+
+RETURN value;
+
+END;
+
+-----------------------------------------
+
+26. TRIGGER
+-----------
+
+CREATE TRIGGER trigger_name
+
+BEFORE INSERT
+
+ON table_name
+
+FOR EACH ROW
+
+BEGIN
+
+SQL Statements;
+
+END;
+
+-----------------------------------------
+
+27. TRANSACTION
+---------------
+
+START TRANSACTION;
+
+SQL Statements;
+
+COMMIT;
+
+-----------------------------------------
+
+28. ROLLBACK
+------------
+
+START TRANSACTION;
+
+SQL Statements;
+
+ROLLBACK;
+
+-----------------------------------------
+
+29. SAVEPOINT
+-------------
+
+START TRANSACTION;
+
+SAVEPOINT Save1;
+
+ROLLBACK TO Save1;
+
+COMMIT;
+
+-----------------------------------------
+
+30. CTE
+-------
+
+WITH CTE_Name AS
+(
+SELECT *
+FROM table_name
+)
+
+SELECT *
+FROM CTE_Name;
+
+-----------------------------------------
+
+31. WINDOW FUNCTION
+-------------------
+
+SELECT
+
+ROW_NUMBER()
+
+OVER
+(
+ORDER BY column_name
+)
+
+FROM table_name;
+
+-----------------------------------------
+
+32. SHOW COMMANDS
+-----------------
+
+SHOW DATABASES;
+
+SHOW TABLES;
+
+SHOW TRIGGERS;
+
+SHOW INDEX
+FROM table_name;
+
+SHOW PROCEDURE STATUS;
+
+SHOW FUNCTION STATUS;
+
+DESCRIBE table_name;
