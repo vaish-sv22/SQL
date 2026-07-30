@@ -1,0 +1,326 @@
+1. SELECT
+----------
+Definition:
+The SELECT statement is used to retrieve data from one or more tables.
+
+Syntax:
+SELECT column_name
+FROM table_name;
+
+Example:
+SELECT username, email
+FROM Users;
+
+-----------------------------------------
+
+2. DISTINCT
+------------
+Definition:
+Returns only unique values by removing duplicate records.
+
+Syntax:
+SELECT DISTINCT column_name
+FROM table_name;
+
+Example:
+SELECT DISTINCT country
+FROM Users;
+
+-----------------------------------------
+
+3. WHERE
+----------
+Definition:
+Filters rows based on a specified condition.
+
+Syntax:
+SELECT *
+FROM table_name
+WHERE condition;
+
+Example:
+SELECT *
+FROM Games
+WHERE price > 1000;
+
+-----------------------------------------
+
+4. ORDER BY
+------------
+Definition:
+Sorts the result in ascending or descending order.
+
+Syntax:
+SELECT *
+FROM table_name
+ORDER BY column_name ASC;
+
+Example:
+SELECT *
+FROM Games
+ORDER BY rating DESC;
+
+-----------------------------------------
+
+5. GROUP BY
+------------
+Definition:
+Groups rows that have the same values into summary rows.
+
+Syntax:
+SELECT column_name, COUNT(*)
+FROM table_name
+GROUP BY column_name;
+
+Example:
+SELECT country, COUNT(*)
+FROM Users
+GROUP BY country;
+
+-----------------------------------------
+
+6. HAVING
+----------
+Definition:
+Filters grouped records after GROUP BY.
+
+Syntax:
+SELECT column_name, COUNT(*)
+FROM table_name
+GROUP BY column_name
+HAVING COUNT(*) > 2;
+
+Example:
+SELECT country, COUNT(*)
+FROM Users
+GROUP BY country
+HAVING COUNT(*) > 2;
+
+-----------------------------------------
+
+7. LIMIT
+---------
+Definition:
+Restricts the number of rows returned.
+
+Syntax:
+SELECT *
+FROM table_name
+LIMIT number;
+
+Example:
+SELECT *
+FROM Games
+LIMIT 5;
+
+-----------------------------------------
+
+8. OFFSET
+----------
+Definition:
+Skips a specified number of rows before returning results.
+
+Syntax:
+SELECT *
+FROM table_name
+LIMIT 5 OFFSET 5;
+
+Example:
+SELECT *
+FROM Users
+LIMIT 10 OFFSET 20;
+
+-----------------------------------------
+
+9. AS (Alias)
+--------------
+Definition:
+Assigns a temporary name to a column or table.
+
+Syntax:
+SELECT column_name AS alias_name
+FROM table_name;
+
+Example:
+SELECT username AS Player_Name
+FROM Users;
+
+-----------------------------------------
+
+10. IN
+-------
+Definition:
+Checks if a value matches any value in a list.
+
+Syntax:
+SELECT *
+FROM table_name
+WHERE column_name IN (value1, value2);
+
+Example:
+SELECT *
+FROM Games
+WHERE genre IN ('Action', 'Sports');
+
+-----------------------------------------
+
+11. BETWEEN
+------------
+Definition:
+Filters values within a specified range.
+
+Syntax:
+SELECT *
+FROM table_name
+WHERE column_name BETWEEN value1 AND value2;
+
+Example:
+SELECT *
+FROM Games
+WHERE price BETWEEN 500 AND 2000;
+
+-----------------------------------------
+
+12. LIKE
+---------
+Definition:
+Searches for a specified pattern.
+
+Wildcards:
+%  → Any number of characters
+_  → Single character
+
+Example:
+SELECT *
+FROM Users
+WHERE username LIKE 'A%';
+
+-----------------------------------------
+
+13. IS NULL
+------------
+Definition:
+Checks for NULL values.
+
+Syntax:
+SELECT *
+FROM table_name
+WHERE column_name IS NULL;
+
+-----------------------------------------
+
+14. IS NOT NULL
+----------------
+Definition:
+Checks for non-NULL values.
+
+Syntax:
+SELECT *
+FROM table_name
+WHERE column_name IS NOT NULL;
+
+-----------------------------------------
+
+15. EXISTS
+-----------
+Definition:
+Returns TRUE if the subquery returns one or more rows.
+
+Syntax:
+SELECT *
+FROM table_name
+WHERE EXISTS
+(
+SELECT *
+FROM another_table
+);
+
+-----------------------------------------
+
+16. ANY
+--------
+Definition:
+Returns TRUE if any value in the subquery satisfies the condition.
+
+Example:
+SELECT *
+FROM Games
+WHERE price > ANY
+(
+SELECT price
+FROM Games
+WHERE genre='Sports'
+);
+
+-----------------------------------------
+
+17. ALL
+--------
+Definition:
+Returns TRUE only if all values in the subquery satisfy the condition.
+
+Example:
+SELECT *
+FROM Games
+WHERE price > ALL
+(
+SELECT price
+FROM Games
+WHERE genre='Puzzle'
+);
+
+-----------------------------------------
+
+18. UNION
+----------
+Definition:
+Combines the results of two or more SELECT statements and removes duplicates.
+
+Syntax:
+SELECT column_name
+FROM table1
+
+UNION
+
+SELECT column_name
+FROM table2;
+
+-----------------------------------------
+
+19. UNION ALL
+--------------
+Definition:
+Combines results from multiple SELECT statements, including duplicates.
+
+Syntax:
+SELECT column_name
+FROM table1
+
+UNION ALL
+
+SELECT column_name
+FROM table2;
+
+-----------------------------------------
+
+20. CASE
+---------
+Definition:
+Performs conditional logic within a query.
+
+Syntax:
+SELECT
+CASE
+    WHEN condition THEN result
+    ELSE result
+END
+FROM table_name;
+
+Example:
+SELECT title,
+CASE
+    WHEN price > 2000 THEN 'Premium'
+    ELSE 'Budget'
+END AS Category
+FROM Games;
+
