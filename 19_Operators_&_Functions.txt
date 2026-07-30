@@ -1,0 +1,336 @@
+1. ARITHMETIC OPERATORS
+-----------------------
+
+Operator    Description
+
++           Addition
+-           Subtraction
+*           Multiplication
+/           Division
+%           Modulus (Remainder)
+
+Example:
+
+SELECT 20 + 10;
+SELECT 50 - 25;
+SELECT 12 * 5;
+SELECT 100 / 10;
+SELECT 25 % 4;
+
+=========================================
+
+2. COMPARISON OPERATORS
+-----------------------
+
+=       Equal To
+
+!=      Not Equal To
+
+<>      Not Equal To
+
+>       Greater Than
+
+<       Less Than
+
+>=      Greater Than or Equal To
+
+<=      Less Than or Equal To
+
+Example
+
+SELECT *
+FROM Games
+WHERE price > 1000;
+
+=========================================
+
+3. LOGICAL OPERATORS
+--------------------
+
+AND
+
+Returns TRUE if all conditions are TRUE.
+
+Example
+
+SELECT *
+FROM Users
+WHERE country='India'
+AND wallet_balance>1000;
+
+-----------------------------------------
+
+OR
+
+Returns TRUE if any condition is TRUE.
+
+Example
+
+SELECT *
+FROM Users
+WHERE country='India'
+OR country='USA';
+
+-----------------------------------------
+
+NOT
+
+Reverses the result.
+
+Example
+
+SELECT *
+FROM Users
+WHERE NOT country='India';
+
+=========================================
+
+4. SPECIAL OPERATORS
+--------------------
+
+IN
+
+SELECT *
+FROM Games
+WHERE genre IN ('Action','Racing');
+
+-----------------------------------------
+
+NOT IN
+
+SELECT *
+FROM Games
+WHERE genre NOT IN ('Sports');
+
+-----------------------------------------
+
+BETWEEN
+
+SELECT *
+FROM Games
+WHERE price BETWEEN 500 AND 2000;
+
+-----------------------------------------
+
+LIKE
+
+%  → Any number of characters
+
+_  → Single character
+
+Examples
+
+WHERE username LIKE 'A%'
+
+WHERE username LIKE '_a%'
+
+-----------------------------------------
+
+IS NULL
+
+SELECT *
+FROM Users
+WHERE email IS NULL;
+
+-----------------------------------------
+
+IS NOT NULL
+
+SELECT *
+FROM Users
+WHERE email IS NOT NULL;
+
+=========================================
+
+5. AGGREGATE FUNCTIONS
+----------------------
+
+COUNT()
+
+Returns total number of rows.
+
+Example
+
+SELECT COUNT(*)
+FROM Users;
+
+-----------------------------------------
+
+SUM()
+
+Returns total value.
+
+SELECT SUM(amount_paid)
+FROM Purchases;
+
+-----------------------------------------
+
+AVG()
+
+Returns average value.
+
+SELECT AVG(price)
+FROM Games;
+
+-----------------------------------------
+
+MIN()
+
+Returns minimum value.
+
+SELECT MIN(price)
+FROM Games;
+
+-----------------------------------------
+
+MAX()
+
+Returns maximum value.
+
+SELECT MAX(price)
+FROM Games;
+
+=========================================
+
+6. STRING FUNCTIONS
+-------------------
+
+UPPER()
+
+LOWER()
+
+LENGTH()
+
+CONCAT()
+
+SUBSTRING()
+
+TRIM()
+
+REPLACE()
+
+Examples
+
+SELECT UPPER(username)
+FROM Users;
+
+SELECT CONCAT(first_name,' ',last_name);
+
+=========================================
+
+7. NUMERIC FUNCTIONS
+--------------------
+
+ROUND()
+
+CEIL()
+
+FLOOR()
+
+ABS()
+
+MOD()
+
+Examples
+
+SELECT ROUND(95.678,2);
+
+SELECT ABS(-45);
+
+=========================================
+
+8. DATE FUNCTIONS
+-----------------
+
+NOW()
+
+CURDATE()
+
+CURTIME()
+
+YEAR()
+
+MONTH()
+
+DAY()
+
+DATEDIFF()
+
+Examples
+
+SELECT NOW();
+
+SELECT CURDATE();
+
+SELECT YEAR(CURDATE());
+
+=========================================
+
+9. WINDOW FUNCTIONS
+-------------------
+
+ROW_NUMBER()
+
+RANK()
+
+DENSE_RANK()
+
+LAG()
+
+LEAD()
+
+FIRST_VALUE()
+
+LAST_VALUE()
+
+NTILE()
+
+=========================================
+
+10. USEFUL CLAUSES
+------------------
+
+DISTINCT
+
+ORDER BY
+
+GROUP BY
+
+HAVING
+
+LIMIT
+
+OFFSET
+
+=========================================
+
+11. OPERATOR PRECEDENCE
+-----------------------
+
+Highest
+
+()
+
+NOT
+
+AND
+
+OR
+
+Lowest
+
+=========================================
+
+12. SUMMARY
+-----------
+
+Arithmetic Operators
+Comparison Operators
+Logical Operators
+Special Operators
+Aggregate Functions
+String Functions
+Numeric Functions
+Date Functions
+Window Functions
+
