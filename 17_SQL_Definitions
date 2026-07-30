@@ -1,0 +1,338 @@
+1. SQL
+------
+SQL (Structured Query Language) is a standard language used to create, manage, manipulate, and retrieve data from relational databases.
+
+-----------------------------------------
+
+2. Database
+-----------
+A database is an organized collection of related data that can be easily accessed, managed, and updated.
+
+-----------------------------------------
+
+3. Table
+--------
+A table stores data in rows and columns.
+
+-----------------------------------------
+
+4. Row (Record)
+---------------
+A row represents a single record in a table.
+
+-----------------------------------------
+
+5. Column (Field)
+-----------------
+A column represents a specific attribute or property of the data.
+
+-----------------------------------------
+
+6. Primary Key
+--------------
+A Primary Key uniquely identifies each record in a table. It cannot contain NULL or duplicate values.
+
+-----------------------------------------
+
+7. Foreign Key
+--------------
+A Foreign Key creates a relationship between two tables by referring to the Primary Key of another table.
+
+-----------------------------------------
+
+8. Candidate Key
+----------------
+A Candidate Key is a column (or set of columns) that can uniquely identify a record. One candidate key is chosen as the Primary Key.
+
+-----------------------------------------
+
+9. Composite Key
+----------------
+A Composite Key consists of two or more columns that together uniquely identify a record.
+
+-----------------------------------------
+
+10. Super Key
+-------------
+A Super Key is one or more columns that uniquely identify a row in a table.
+
+-----------------------------------------
+
+11. Alternate Key
+-----------------
+Candidate keys that are not selected as the Primary Key are called Alternate Keys.
+
+-----------------------------------------
+
+12. Constraint
+--------------
+Constraints are rules applied to columns to ensure data accuracy and integrity.
+
+Types:
+• PRIMARY KEY
+• FOREIGN KEY
+• UNIQUE
+• NOT NULL
+• CHECK
+• DEFAULT
+
+-----------------------------------------
+
+13. DDL (Data Definition Language)
+----------------------------------
+Used to define and modify database structures.
+
+Commands:
+CREATE
+ALTER
+DROP
+TRUNCATE
+RENAME
+
+-----------------------------------------
+
+14. DML (Data Manipulation Language)
+------------------------------------
+Used to manipulate data inside tables.
+
+Commands:
+INSERT
+UPDATE
+DELETE
+
+-----------------------------------------
+
+15. DQL (Data Query Language)
+-----------------------------
+Used to retrieve data from the database.
+
+Command:
+SELECT
+
+-----------------------------------------
+
+16. TCL (Transaction Control Language)
+----------------------------------------
+Used to manage transactions.
+
+Commands:
+COMMIT
+ROLLBACK
+SAVEPOINT
+
+-----------------------------------------
+
+17. DCL (Data Control Language)
+-------------------------------
+Used to control user permissions.
+
+Commands:
+GRANT
+REVOKE
+
+-----------------------------------------
+
+18. Operators
+-------------
+
+Arithmetic Operators
++  Addition
+-  Subtraction
+*  Multiplication
+/  Division
+%  Modulus
+
+Comparison Operators
+=
+!=
+<>
+>
+<
+>=
+<=
+
+Logical Operators
+AND
+OR
+NOT
+
+Special Operators
+IN
+NOT IN
+BETWEEN
+LIKE
+IS NULL
+IS NOT NULL
+EXISTS
+ANY
+ALL
+
+-----------------------------------------
+
+19. Aggregate Functions
+-----------------------
+COUNT()
+SUM()
+AVG()
+MIN()
+MAX()
+
+-----------------------------------------
+
+20. String Functions
+--------------------
+UPPER()
+LOWER()
+LENGTH()
+CONCAT()
+SUBSTRING()
+TRIM()
+REPLACE()
+
+-----------------------------------------
+
+21. Date Functions
+------------------
+NOW()
+CURDATE()
+CURTIME()
+YEAR()
+MONTH()
+DAY()
+DATEDIFF()
+
+-----------------------------------------
+
+22. Numeric Functions
+---------------------
+ROUND()
+CEIL()
+FLOOR()
+ABS()
+MOD()
+
+-----------------------------------------
+
+23. ORDER BY
+------------
+Sorts the result in ascending (ASC) or descending (DESC) order.
+
+-----------------------------------------
+
+24. GROUP BY
+------------
+Groups rows that have the same values in specified columns.
+
+-----------------------------------------
+
+25. HAVING
+----------
+Filters grouped data after GROUP BY.
+
+-----------------------------------------
+
+26. WHERE
+----------
+Filters rows before grouping.
+
+-----------------------------------------
+
+27. JOIN
+--------
+A JOIN combines rows from two or more tables.
+
+Types:
+• INNER JOIN
+• LEFT JOIN
+• RIGHT JOIN
+• CROSS JOIN
+• SELF JOIN
+
+-----------------------------------------
+
+28. Subquery
+------------
+A query written inside another SQL query.
+
+-----------------------------------------
+
+29. View
+--------
+A View is a virtual table created using a SELECT statement.
+
+-----------------------------------------
+
+30. Index
+---------
+An Index improves the speed of data retrieval.
+
+-----------------------------------------
+
+31. Stored Procedure
+--------------------
+A Stored Procedure is a saved SQL program that performs a specific task.
+
+-----------------------------------------
+
+32. Function
+------------
+A Function accepts input, performs a calculation, and returns a single value.
+
+-----------------------------------------
+
+33. Trigger
+-----------
+A Trigger automatically executes when INSERT, UPDATE, or DELETE operations occur.
+
+-----------------------------------------
+
+34. Transaction
+---------------
+A Transaction is a sequence of SQL statements executed as a single unit of work.
+
+-----------------------------------------
+
+35. ACID Properties
+-------------------
+Atomicity
+Consistency
+Isolation
+Durability
+
+-----------------------------------------
+
+36. CTE (Common Table Expression)
+---------------------------------
+A temporary result set that can be referenced within a SQL statement using the WITH clause.
+
+-----------------------------------------
+
+37. Window Function
+-------------------
+Performs calculations across a set of rows without grouping them.
+
+Examples:
+ROW_NUMBER()
+RANK()
+DENSE_RANK()
+LAG()
+LEAD()
+
+-----------------------------------------
+
+38. Normalization
+-----------------
+The process of organizing data to reduce redundancy and improve data integrity.
+
+-----------------------------------------
+
+39. Denormalization
+-------------------
+Combining tables or adding redundant data to improve query performance.
+
+-----------------------------------------
+
+40. Schema
+----------
+A Schema is the logical structure of a database containing tables, views, procedures, functions, and other objects.
+
