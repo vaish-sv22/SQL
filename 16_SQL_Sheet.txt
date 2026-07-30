@@ -1,0 +1,229 @@
+DATABASE COMMANDS
+-----------------
+CREATE DATABASE database_name;
+USE database_name;
+DROP DATABASE database_name;
+SHOW DATABASES;
+
+-----------------------------------------
+
+TABLE COMMANDS
+--------------
+CREATE TABLE table_name (...);
+SHOW TABLES;
+DESCRIBE table_name;
+ALTER TABLE table_name ADD column_name datatype;
+ALTER TABLE table_name DROP COLUMN column_name;
+RENAME TABLE old_name TO new_name;
+DROP TABLE table_name;
+TRUNCATE TABLE table_name;
+
+-----------------------------------------
+
+CONSTRAINTS
+-----------
+PRIMARY KEY
+FOREIGN KEY
+UNIQUE
+NOT NULL
+CHECK
+DEFAULT
+AUTO_INCREMENT
+
+-----------------------------------------
+
+DML COMMANDS
+------------
+INSERT
+UPDATE
+DELETE
+
+-----------------------------------------
+
+DQL
+---
+SELECT
+DISTINCT
+WHERE
+ORDER BY
+LIMIT
+
+-----------------------------------------
+
+OPERATORS
+---------
+=
+!=
+<>
+>
+<
+>=
+<=
+BETWEEN
+IN
+NOT IN
+LIKE
+AND
+OR
+NOT
+
+-----------------------------------------
+
+AGGREGATE FUNCTIONS
+-------------------
+COUNT()
+SUM()
+AVG()
+MIN()
+MAX()
+
+-----------------------------------------
+
+GROUP BY
+HAVING
+
+-----------------------------------------
+
+JOINS
+-----
+INNER JOIN
+LEFT JOIN
+RIGHT JOIN
+CROSS JOIN
+SELF JOIN
+
+-----------------------------------------
+
+SUBQUERIES
+----------
+Single Row
+Multiple Row
+Correlated
+Nested
+
+-----------------------------------------
+
+VIEWS
+-----
+CREATE VIEW
+ALTER VIEW
+DROP VIEW
+
+-----------------------------------------
+
+INDEXES
+-------
+CREATE INDEX
+SHOW INDEX
+DROP INDEX
+
+-----------------------------------------
+
+STORED PROCEDURES
+-----------------
+CREATE PROCEDURE
+CALL
+DROP PROCEDURE
+
+-----------------------------------------
+
+FUNCTIONS
+---------
+CREATE FUNCTION
+RETURN
+DETERMINISTIC
+READS SQL DATA
+
+-----------------------------------------
+
+TRIGGERS
+--------
+BEFORE INSERT
+AFTER INSERT
+BEFORE UPDATE
+AFTER UPDATE
+BEFORE DELETE
+AFTER DELETE
+
+OLD.column_name
+NEW.column_name
+
+-----------------------------------------
+
+TRANSACTIONS
+------------
+START TRANSACTION
+COMMIT
+ROLLBACK
+SAVEPOINT
+RELEASE SAVEPOINT
+
+-----------------------------------------
+
+CTEs
+----
+WITH
+WITH RECURSIVE
+
+-----------------------------------------
+
+WINDOW FUNCTIONS
+----------------
+ROW_NUMBER()
+RANK()
+DENSE_RANK()
+NTILE()
+LAG()
+LEAD()
+FIRST_VALUE()
+LAST_VALUE()
+
+-----------------------------------------
+
+STRING FUNCTIONS
+----------------
+CONCAT()
+UPPER()
+LOWER()
+LENGTH()
+SUBSTRING()
+TRIM()
+REPLACE()
+
+-----------------------------------------
+
+DATE FUNCTIONS
+--------------
+NOW()
+CURDATE()
+CURTIME()
+YEAR()
+MONTH()
+DAY()
+DATEDIFF()
+
+-----------------------------------------
+
+NUMERIC FUNCTIONS
+-----------------
+ROUND()
+CEIL()
+FLOOR()
+ABS()
+MOD()
+
+-----------------------------------------
+
+USEFUL COMMANDS
+---------------
+SHOW DATABASES;
+SHOW TABLES;
+SHOW INDEX FROM table_name;
+SHOW TRIGGERS;
+SHOW PROCEDURE STATUS;
+SHOW FUNCTION STATUS;
+DESCRIBE table_name;
+
+=========================================
+END OF SQL CHEAT SHEET
+=========================================
