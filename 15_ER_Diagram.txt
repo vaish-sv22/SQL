@@ -1,1 +1,113 @@
+                         GAMING PLATFORM DATABASE
+                              ER DIAGRAM
 
+                                    +----------------------+
+                                    |      Developers      |
+                                    +----------------------+
+                                    | PK developer_id      |
+                                    | developer_name       |
+                                    | country              |
+                                    +----------+-----------+
+                                               |
+                                               | 1
+                                               |
+                                               | M
++----------------------+              +---------v----------+
+|        Users         |              |       Games        |
++----------------------+              +--------------------+
+| PK user_id           |              | PK game_id         |
+| username             |              | FK developer_id    |
+| email                |              | title              |
+| password             |              | genre              |
+| country              |              | release_date       |
+| wallet_balance       |              | price              |
++----------+-----------+              | rating             |
+           |                          +---------+----------+
+           |1                                   |
+           |                                    |
+           |M                                   |1
+           |                                    |M
++----------v-----------+              +---------v----------+
+|      Purchases       |              |      Reviews       |
++----------------------+              +--------------------+
+| PK purchase_id       |              | PK review_id       |
+| FK user_id           |              | FK user_id         |
+| FK game_id           |              | FK game_id         |
+| amount_paid          |              | rating             |
+| purchase_date        |              | review             |
++----------+-----------+              | review_date        |
+           |                          +--------------------+
+           |
+           |1
+           |
+           |M
++----------v-----------+
+|      Payments        |
++----------------------+
+| PK payment_id        |
+| FK purchase_id       |
+| payment_method       |
+| payment_status       |
+| payment_date         |
++----------------------+
+
++----------------------+             +----------------------+
+|    Achievements      |             |   UserAchievements   |
++----------------------+             +----------------------+
+| PK achievement_id    |1----------M | PK user_achieve_id   |
+| FK game_id           |             | FK user_id           |
+| achievement_name     |             | FK achievement_id    |
+| points               |             | unlocked_date        |
++----------------------+             +----------------------+
+
++----------------------+             +----------------------+
+|     Leaderboards     |             |    GameSessions      |
++----------------------+             +----------------------+
+| PK leaderboard_id    |             | PK session_id        |
+| FK game_id           |             | FK user_id           |
+| FK user_id           |             | FK game_id           |
+| score                |             | login_time           |
+| rank_position        |             | logout_time          |
++----------------------+             | hours_played         |
+                                     +----------------------+
+
++----------------------+
+|       Friends        |
++----------------------+
+| PK friend_id         |
+| FK user_id           |
+| FK friend_user_id    |
+| status               |
++----------------------+
+
+=========================================================
+PRIMARY RELATIONSHIPS
+=========================================================
+
+Developers        1 ------ M Games
+
+Users             1 ------ M Purchases
+
+Games             1 ------ M Purchases
+
+Users             1 ------ M Reviews
+
+Games             1 ------ M Reviews
+
+Purchases         1 ------ M Payments
+
+Games             1 ------ M Achievements
+
+Users             1 ------ M UserAchievements
+
+Achievements      1 ------ M UserAchievements
+
+Users             1 ------ M Leaderboards
+
+Games             1 ------ M Leaderboards
+
+Users             1 ------ M GameSessions
+
+Games             1 ------ M GameSessions
+
+Users             M ------ M Users (Friends Table)
