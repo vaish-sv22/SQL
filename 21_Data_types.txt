@@ -1,0 +1,278 @@
+What is a Data Type?
+--------------------
+A data type defines the kind of values that can be stored in a column. It determines the storage size, valid operations, and range of data.
+
+=========================================
+1. NUMERIC DATA TYPES
+=========================================
+
+INT
+---
+Stores whole numbers.
+
+Range:
+-2,147,483,648 to 2,147,483,647
+
+Example:
+user_id INT
+
+-----------------------------------------
+
+BIGINT
+------
+Stores very large whole numbers.
+
+Example:
+mobile_number BIGINT
+
+-----------------------------------------
+
+SMALLINT
+--------
+Stores small integer values.
+
+Example:
+age SMALLINT
+
+-----------------------------------------
+
+TINYINT
+-------
+Stores very small integer values.
+
+Example:
+rating TINYINT
+
+-----------------------------------------
+
+DECIMAL
+-------
+Stores exact decimal values.
+
+Syntax:
+DECIMAL(10,2)
+
+Example:
+price DECIMAL(10,2)
+
+-----------------------------------------
+
+FLOAT
+-----
+Stores approximate decimal values.
+
+Example:
+percentage FLOAT
+
+-----------------------------------------
+
+DOUBLE
+------
+Stores large floating-point numbers.
+
+Example:
+salary DOUBLE
+
+=========================================
+2. STRING DATA TYPES
+=========================================
+
+CHAR
+----
+Fixed-length character data.
+
+Example:
+gender CHAR(1)
+
+-----------------------------------------
+
+VARCHAR
+-------
+Variable-length character data.
+
+Example:
+username VARCHAR(50)
+
+-----------------------------------------
+
+TEXT
+----
+Stores large amounts of text.
+
+Example:
+review TEXT
+
+=========================================
+3. DATE & TIME DATA TYPES
+=========================================
+
+DATE
+----
+Stores date only.
+
+Format:
+YYYY-MM-DD
+
+Example:
+purchase_date DATE
+
+-----------------------------------------
+
+TIME
+----
+Stores only time.
+
+Format:
+HH:MM:SS
+
+Example:
+login_time TIME
+
+-----------------------------------------
+
+DATETIME
+--------
+Stores both date and time.
+
+Example:
+created_at DATETIME
+
+-----------------------------------------
+
+TIMESTAMP
+---------
+Automatically stores current date and time.
+
+Example:
+updated_at TIMESTAMP
+
+-----------------------------------------
+
+YEAR
+----
+Stores a year.
+
+Example:
+release_year YEAR
+
+=========================================
+4. BOOLEAN DATA TYPE
+=========================================
+
+BOOLEAN (BOOL)
+
+Stores TRUE or FALSE values.
+
+Example:
+is_active BOOLEAN
+
+=========================================
+5. BINARY DATA TYPES
+=========================================
+
+BLOB
+----
+Stores binary objects such as images or files.
+
+Example:
+profile_picture BLOB
+
+=========================================
+6. ENUM DATA TYPE
+=========================================
+
+Stores one value from a predefined list.
+
+Example:
+
+status ENUM('Pending','Completed','Cancelled')
+
+=========================================
+7. JSON DATA TYPE
+=========================================
+
+Stores data in JSON format.
+
+Example:
+
+settings JSON
+
+=========================================
+COMMONLY USED DATA TYPES
+=========================================
+
+INT
+
+VARCHAR
+
+DECIMAL
+
+DATE
+
+DATETIME
+
+TEXT
+
+BOOLEAN
+
+TIMESTAMP
+
+=========================================
+DATA TYPE SELECTION GUIDE
+=========================================
+
+User ID           → INT
+
+Username          → VARCHAR(50)
+
+Email             → VARCHAR(100)
+
+Password          → VARCHAR(255)
+
+Game Title        → VARCHAR(100)
+
+Description       → TEXT
+
+Price             → DECIMAL(10,2)
+
+Rating            → DECIMAL(3,2)
+
+Country           → VARCHAR(50)
+
+Purchase Date     → DATE
+
+Created At        → DATETIME
+
+Last Updated      → TIMESTAMP
+
+=========================================
+SUMMARY
+=========================================
+
+Numeric Data Types
+INT
+BIGINT
+SMALLINT
+TINYINT
+DECIMAL
+FLOAT
+DOUBLE
+
+String Data Types
+CHAR
+VARCHAR
+TEXT
+
+Date & Time Data Types
+DATE
+TIME
+DATETIME
+TIMESTAMP
+YEAR
+
+Other Data Types
+BOOLEAN
+BLOB
+ENUM
+JSON
+
