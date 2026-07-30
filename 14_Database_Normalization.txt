@@ -1,1 +1,235 @@
+===============================
+DATABASE NORMALIZATION
+===============================
 
+What is Database Normalization?
+-------------------------------
+Database Normalization is the process of organizing data into multiple related tables to reduce data redundancy, improve consistency, and maintain data integrity.
+
+Advantages
+----------
+• Reduces duplicate data
+• Prevents insertion, update, and deletion anomalies
+• Improves data consistency
+• Saves storage space
+• Makes database maintenance easier
+• Improves database design
+
+====================================
+1. Unnormalized Form (UNF)
+====================================
+
+Definition:
+Data is stored without any proper structure and may contain repeating groups.
+
+Example
+
+UserID | Username | Purchased Games
+----------------------------------------------
+1      | Alex     | GTA V, Valorant, Minecraft
+
+Problems:
+• Multiple values stored in one column
+• Difficult to search
+• Difficult to update
+
+====================================
+2. First Normal Form (1NF)
+====================================
+
+Rule:
+• Each column contains only one value.
+• No repeating groups.
+• Every row is unique.
+
+Example
+
+UserID | Username | Game
+-------------------------
+1      | Alex     | GTA V
+1      | Alex     | Valorant
+1      | Alex     | Minecraft
+
+====================================
+3. Second Normal Form (2NF)
+====================================
+
+Rule:
+• Must already be in 1NF.
+• Remove partial dependency.
+• Every non-key column should depend on the entire primary key.
+
+Before
+
+Purchase(UserID, GameID, Username, GameTitle)
+
+Problems:
+• Username depends only on UserID.
+• GameTitle depends only on GameID.
+
+After
+
+Users
+------
+UserID
+Username
+
+Games
+------
+GameID
+GameTitle
+
+Purchases
+----------
+PurchaseID
+UserID
+GameID
+
+====================================
+4. Third Normal Form (3NF)
+====================================
+
+Rule:
+• Must already be in 2NF.
+• Remove transitive dependency.
+
+Before
+
+Users
+
+UserID
+Username
+Country
+CountryCode
+
+CountryCode depends on Country instead of UserID.
+
+After
+
+Countries
+
+CountryID
+Country
+CountryCode
+
+Users
+
+UserID
+Username
+CountryID
+
+====================================
+5. Boyce-Codd Normal Form (BCNF)
+====================================
+
+Rule:
+Every determinant must be a candidate key.
+
+Example
+
+DeveloperID → DeveloperName
+GameID → DeveloperID
+
+BCNF removes dependency issues even after 3NF.
+
+====================================
+6. Fourth Normal Form (4NF)
+====================================
+
+Rule:
+Remove multi-valued dependencies.
+
+Example
+
+Instead of storing
+
+User
+Games
+Achievements
+
+Store
+
+Users
+Games
+UserAchievements
+
+====================================
+7. Fifth Normal Form (5NF)
+====================================
+
+Rule:
+Remove join dependencies.
+
+Complex relationships are divided into smaller tables without losing information.
+
+====================================
+Normalization Used in This Project
+====================================
+
+Tables
+
+• Users
+• Games
+• Purchases
+• Reviews
+• Payments
+• Friends
+• Developers
+• Achievements
+• UserAchievements
+• Leaderboards
+• GameSessions
+
+Relationships
+
+Users ----------< Purchases >---------- Games
+
+Users ----------< Reviews >------------ Games
+
+Users ----------< Friends
+
+Games ----------< Achievements
+
+Users ----------< UserAchievements >---- Achievements
+
+Purchases ------< Payments
+
+Users ----------< Leaderboards >------- Games
+
+Users ----------< GameSessions >------- Games
+
+====================================
+Benefits in This Project
+====================================
+
+• No duplicate user information
+• No duplicate game information
+• Easy maintenance
+• Better performance
+• Data consistency
+• Reduced storage
+• Improved scalability
+
+====================================
+Normal Forms Summary
+====================================
+
+UNF  → Unstructured Data
+
+1NF  → Atomic Values
+
+2NF  → Remove Partial Dependency
+
+3NF  → Remove Transitive Dependency
+
+BCNF → Every Determinant is a Candidate Key
+
+4NF  → Remove Multi-Valued Dependency
+
+5NF  → Remove Join Dependency
+
+====================================
+Conclusion
+====================================
+
+The Gaming Platform Database follows normalization principles to minimize redundancy, improve data consistency, and maintain referential integrity. The database is designed up to Third Normal Form (3NF) while following BCNF concepts where applicable, making it suitable for real-world applications and SQL interview demonstrations.
