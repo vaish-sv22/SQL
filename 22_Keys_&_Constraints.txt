@@ -1,0 +1,277 @@
+=========================================
+      SQL KEYS AND CONSTRAINTS
+=========================================
+
+What are Keys?
+--------------
+Keys are columns (or a combination of columns) used to uniquely identify records and establish relationships between tables.
+
+What are Constraints?
+---------------------
+Constraints are rules applied to table columns to ensure the accuracy, consistency, and integrity of the data.
+
+=========================================
+1. PRIMARY KEY
+=========================================
+
+Definition:
+A Primary Key uniquely identifies each record in a table.
+
+Rules:
+• Cannot contain NULL values
+• Cannot contain duplicate values
+• Only one Primary Key per table
+
+Syntax:
+
+CREATE TABLE Users
+(
+    user_id INT PRIMARY KEY,
+    username VARCHAR(50)
+);
+
+-----------------------------------------
+
+2. FOREIGN KEY
+=========================================
+
+Definition:
+A Foreign Key creates a relationship between two tables by referencing the Primary Key of another table.
+
+Syntax:
+
+CREATE TABLE Purchases
+(
+    purchase_id INT PRIMARY KEY,
+    user_id INT,
+    FOREIGN KEY (user_id)
+    REFERENCES Users(user_id)
+);
+
+Benefits:
+• Maintains referential integrity
+• Prevents invalid data
+
+-----------------------------------------
+
+3. CANDIDATE KEY
+=========================================
+
+Definition:
+A Candidate Key is a column (or combination of columns) that can uniquely identify a row.
+
+Example:
+
+EmployeeID
+Email
+AadhaarNumber
+
+One Candidate Key is selected as the Primary Key.
+
+-----------------------------------------
+
+4. SUPER KEY
+=========================================
+
+Definition:
+A Super Key is any column or set of columns that uniquely identifies a record.
+
+Example:
+
+UserID
+
+UserID + Username
+
+UserID + Email
+
+All of the above are Super Keys.
+
+-----------------------------------------
+
+5. COMPOSITE KEY
+=========================================
+
+Definition:
+A Composite Key consists of two or more columns that together uniquely identify a row.
+
+Example:
+
+PRIMARY KEY(user_id, game_id)
+
+Used in many-to-many relationship tables.
+
+-----------------------------------------
+
+6. ALTERNATE KEY
+=========================================
+
+Definition:
+A Candidate Key that is not chosen as the Primary Key.
+
+Example
+
+Candidate Keys
+
+EmployeeID
+
+Email
+
+Primary Key = EmployeeID
+
+Alternate Key = Email
+
+-----------------------------------------
+
+7. UNIQUE CONSTRAINT
+=========================================
+
+Definition:
+Ensures all values in a column are unique.
+
+Syntax:
+
+email VARCHAR(100) UNIQUE
+
+Benefits:
+• Prevents duplicate values
+• Allows one NULL value in MySQL
+
+-----------------------------------------
+
+8. NOT NULL CONSTRAINT
+=========================================
+
+Definition:
+Does not allow NULL values.
+
+Syntax:
+
+username VARCHAR(50) NOT NULL
+
+-----------------------------------------
+
+9. CHECK CONSTRAINT
+=========================================
+
+Definition:
+Ensures values satisfy a condition.
+
+Syntax:
+
+age INT CHECK(age >= 18)
+
+price DECIMAL(10,2)
+CHECK(price > 0)
+
+-----------------------------------------
+
+10. DEFAULT CONSTRAINT
+=========================================
+
+Definition:
+Automatically assigns a default value if no value is provided.
+
+Syntax:
+
+status VARCHAR(20)
+DEFAULT 'Active'
+
+-----------------------------------------
+
+11. AUTO_INCREMENT
+=========================================
+
+Definition:
+Automatically generates sequential numeric values.
+
+Syntax:
+
+user_id INT AUTO_INCREMENT PRIMARY KEY
+
+-----------------------------------------
+
+12. KEY DIFFERENCES
+=========================================
+
+Primary Key
+------------
+• Unique
+• Not NULL
+• One per table
+
+Unique Key
+-----------
+• Unique
+• Allows one NULL (MySQL)
+• Multiple per table
+
+Foreign Key
+------------
+• References another table
+• Maintains relationships
+
+Composite Key
+--------------
+• Multiple columns
+• Unique together
+
+-----------------------------------------
+
+13. ADVANTAGES OF KEYS
+=========================================
+
+• Uniquely identifies records
+• Prevents duplicate data
+• Maintains relationships
+• Improves data integrity
+• Supports indexing
+• Improves query performance
+
+-----------------------------------------
+
+14. ADVANTAGES OF CONSTRAINTS
+=========================================
+
+• Prevents invalid data
+• Maintains consistency
+• Improves reliability
+• Enforces business rules
+• Reduces data errors
+
+-----------------------------------------
+
+15. SUMMARY TABLE
+
+PRIMARY KEY
+Unique identifier
+
+FOREIGN KEY
+Links tables
+
+CANDIDATE KEY
+Possible Primary Key
+
+SUPER KEY
+Any unique identifier
+
+COMPOSITE KEY
+Multiple columns as key
+
+ALTERNATE KEY
+Candidate Key not selected
+
+UNIQUE
+Prevents duplicates
+
+NOT NULL
+No NULL values
+
+CHECK
+Restricts values
+
+DEFAULT
+Assigns default values
+
+AUTO_INCREMENT
+Generates sequential IDs
+
