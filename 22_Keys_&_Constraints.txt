@@ -1,7 +1,3 @@
-=========================================
-      SQL KEYS AND CONSTRAINTS
-=========================================
-
 What are Keys?
 --------------
 Keys are columns (or a combination of columns) used to uniquely identify records and establish relationships between tables.
@@ -10,7 +6,7 @@ What are Constraints?
 ---------------------
 Constraints are rules applied to table columns to ensure the accuracy, consistency, and integrity of the data.
 
-=========================================
+-----------------------------------------
 1. PRIMARY KEY
 =========================================
 
@@ -240,7 +236,7 @@ Composite Key
 
 -----------------------------------------
 
-15. SUMMARY TABLE
+15. SUMMARY OF ALL THESE 
 
 PRIMARY KEY
 Unique identifier
