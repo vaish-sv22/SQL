@@ -31,4 +31,4 @@ A collection of SQL scripts covering beginner to advanced concepts using MySQL.
 ## Tools
 
 - MySQL
-- MySQL Workbench
+- MySQL Workbench 
