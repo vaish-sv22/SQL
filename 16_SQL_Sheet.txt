@@ -224,6 +224,4 @@ SHOW PROCEDURE STATUS;
 SHOW FUNCTION STATUS;
 DESCRIBE table_name;
 
-=========================================
-END OF SQL CHEAT SHEET
-=========================================
+
