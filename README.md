@@ -31,4 +31,8 @@ A collection of SQL scripts covering beginner to advanced concepts using MySQL.
 ## Tools
 
 - MySQL
-- MySQL Workbench 
+- MySQL Workbench
+- SQL Command Line Client
+- Visual Studio Code
+- Git
+- GitHub
