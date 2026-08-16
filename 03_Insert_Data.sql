@@ -1,6 +1,6 @@
 USE GamingPlatformDB;
 
--- 1. Insert Categories ======
+-- 1. Insert Categories =====
 INSERT INTO Categories (category_name) VALUES
 ('Action'),
 ('Adventure'),
