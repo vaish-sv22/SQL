@@ -1,4 +1,3 @@
-
 -- 1. Users Table========
 
 CREATE TABLE Users (
