@@ -176,4 +176,3 @@ SELECT COUNT(*) AS TotalUsers FROM Users;
 SELECT COUNT(*) AS TotalGames FROM Games;
 SELECT COUNT(*) AS TotalPurchases FROM Purchases;
 SELECT COUNT(*) AS TotalReviews FROM Reviews;
-
