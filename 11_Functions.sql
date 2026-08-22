@@ -281,4 +281,3 @@ DELIMITER ;
 -- to Run
 SELECT username, wallet_balance, Membership(wallet_balance)
 FROM Users;
-
