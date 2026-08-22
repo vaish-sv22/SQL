@@ -245,4 +245,3 @@ Row Deleted
    │
    ▼
 AFTER DELETE
-
