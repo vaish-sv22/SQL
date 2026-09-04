@@ -335,4 +335,3 @@ Combining tables or adding redundant data to improve query performance.
 40. Schema
 ----------
 A Schema is the logical structure of a database containing tables, views, procedures, functions, and other objects.
-
