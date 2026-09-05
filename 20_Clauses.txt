@@ -323,4 +323,3 @@ CASE
     ELSE 'Budget'
 END AS Category
 FROM Games;
-
