@@ -294,4 +294,3 @@ WHERE Db='GamingPlatformDB';
 
 -- 22. Show Procedure Definition
 SHOW CREATE PROCEDURE GetAllUsers;
-
