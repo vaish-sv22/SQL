@@ -319,17 +319,6 @@ OR
 
 Lowest
 
-=========================================
 
-12. SUMMARY
------------
 
-Arithmetic Operators
-Comparison Operators
-Logical Operators
-Special Operators
-Aggregate Functions
-String Functions
-Numeric Functions
-Date Functions
-Window Functions
+
