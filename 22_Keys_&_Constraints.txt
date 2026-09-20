@@ -270,4 +270,3 @@ Assigns default values
 
 AUTO_INCREMENT
 Generates sequential IDs
-
