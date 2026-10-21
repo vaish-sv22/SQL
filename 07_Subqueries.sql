@@ -338,4 +338,3 @@ GROUP BY user_id
 ) X
 )
 );
-
